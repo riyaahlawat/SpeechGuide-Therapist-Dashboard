@@ -151,8 +151,19 @@ home {
   z-index: 1; /* Ensures it is above the patients content */
 }
 
-patients {
+patients, supervisor {
   opacity: 0;
   z-index: 0; /* Ensures it is behind the home content */
   display: none; /* Hide by default */
+}
+
+.supervisor {
+  background-color: aliceblue;
+  padding: 10px;
+}
+
+.open, .closed {
+  background-color: aliceblue;
+  padding: 10px;
+  margin: 10px;
 }
