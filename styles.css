@@ -1,0 +1,158 @@
+body {
+  font-family: poppins-bold;
+}
+
+/* home */
+
+.goodmorning {
+  background-color: rgb(243, 255, 131);
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.create-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin: 20px;
+}
+
+.create-btn svg {
+  margin-right: 8px;
+}
+
+.create-btn:hover {
+  background-color: #000000;
+}
+
+.modal-header {
+  background-color: #ffffff;
+  color: rgb(7, 12, 117);
+}
+
+.modal-footer {
+  justify-content: center;
+}
+
+hr {
+  width: 80%;
+  align-items: center;
+  padding: 10px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 25%;
+  padding: 20px;
+  background-color: #f8f9fa;
+  overflow-y: auto;
+}
+
+.content {
+  margin-left: 25%;
+  padding: 20px;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.table-heading {
+  background-color: aliceblue;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 20px 20px;
+}
+
+.calendar {
+  padding: 30px;
+}
+
+.documentation h3 {
+  background-color: aliceblue;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.documentation button {
+  margin: 10px 10px;
+  width: 200px;
+}
+
+.info-box {
+  background-color: #c9e4ff;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  margin: 10px;
+}
+
+.reviews-section {
+  margin: 20px 0;
+}
+
+.review-box {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 0 10px;
+}
+
+.review-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+}
+
+.review-container::-webkit-scrollbar {
+  display: none;
+}
+
+.review-box:last-child {
+  margin-right: 40px; /* To accommodate the swipe arrow */
+}
+
+.swipe-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: #007bff;
+  cursor: pointer;
+}
+
+/* home and patients */
+
+.nav-link.active {
+  background-color: #007bff; /* Blue background for active link */
+  color: white; /* White text color */
+}
+
+home.show, patients.show {
+  display: block;
+}
+
+home, patients {
+  transition: opacity 0.5s ease;
+}
+
+home {
+  opacity: 1;
+  z-index: 1; /* Ensures it is above the patients content */
+}
+
+patients {
+  opacity: 0;
+  z-index: 0; /* Ensures it is behind the home content */
+  display: none; /* Hide by default */
+}

@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpeechGuide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row" id="home">
+            <!-- Sidebar -->
+            <div class="col-3 sidebar">
+                <div class="d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary" style="height: 100vh;">
+                    <a href="/"
+                        class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                        <span class="fs-4">SpeechGuide</span>
+                    </a>
+                    <hr>
+                    <ul class="nav nav-pills flex-column mb-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active" aria-current="page">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link">
+                                Patients
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link">
+                                Supervisor
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link">
+                                Speech Exercises
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link">
+                                Support
+                            </a>
+                        </li>
+                        <li></li>
+                        <a href="#" class="nav-link">
+                            Chats
+                        </a>
+                    </ul>
+                    <hr>
+                    <div class="dropdown">
+                        <a href="#"
+                            class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="/assets/patient.png/mdo.png" alt="" width="32" height="32"
+                                class="rounded-circle me-2">
+                            <strong>Lalit Kasana</strong>
+                        </a>
+                        <ul class="dropdown-menu text-small shadow">
+                            <li><a class="dropdown-item" href="#">Email Inbox</a></li>
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Sign out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Right Part -->
+            <div class="col-9 content">
+                <h2 class="goodmorning">Hello, Doctor! Good Morning! :)</h2>
+                <hr>
+                <home>
+                    <!-- Button to open modal -->
+                    <button type="button" class="create-btn" data-bs-toggle="modal" data-bs-target="#createModal">
+                        <!-- Plus SVG Icon -->
+                        <svg width="24" height="24" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                            <path d="M8 7V1a1 1 0 0 1 2 0v6h6a1 1 0 0 1 0 2H10v6a1 1 0 0 1-2 0V9H2a1 1 0 0 1 0-2h6z" />
+                        </svg>
+                        Create
+                    </button>
+                    <hr>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="createModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="createModalLabel">What to write!</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <a href="URL_FOR_PRESCRIPTION" class="btn btn-primary w-100"
+                                                target="_blank">Prescription</a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="URL_FOR_PROGRESS_REPORT" class="btn btn-primary w-100"
+                                                target="_blank">Progress Report</a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="URL_FOR_NOTES" class="btn btn-primary w-100"
+                                                target="_blank">Notes</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Table -->
+                    <h3 class="table-heading">Scheduled Sessions for Today (10-Sept-2024)</h3>
+                    <table class="table tabular mt-4 ">
+                        <thead>
+                            <tr>
+                                <th scope="col">S.No.</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Time Slot</th>
+                                <th scope="col">Meeting Link</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table-danger">
+                                <th scope="row">1</th>
+                                <td>Priya Gupta</td>
+                                <td>10:00 AM - 11:00 AM</td>
+                                <td><a href="https://meet.google.com/mbg-svhj-shh" target="_blank">Link</a></td>
+                            </tr>
+                            <tr class="table-success">
+                                <th scope="row">2</th>
+                                <td>Piyush Mehta</td>
+                                <td>1:00 PM - 2:00 PM</td>
+                                <td><a href="https://meet.google.com/mbg-svhj-shh" target="_blank">Link</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Shermin Singhal</td>
+                                <td>5:00 PM - 6:00 PM</td>
+                                <td><a href="https://meet.google.com/mbg-svhj-shh" target="_blank">Link</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <hr>
+
+                    <!-- Calendar -->
+                    <h3 class="table-heading">Calendar</h3>
+                    <div class="calendar">
+                        <iframe
+                            src="https://calendar.google.com/calendar/embed?src=rahlawat903%40gmail.com&ctz=Asia%2FKolkata"
+                            style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+                    </div>
+                    <hr>
+
+                    <!-- Notes -->
+                    <div class="container mt-5 documentation">
+                        <h3 class="fw-bold">Recent Documentation</h3>
+                        <!-- Incomplete Notes -->
+                        <p>
+                            <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#pendingNotes" aria-expanded="false" aria-controls="pendingNotes">
+                                My Notes
+                            </button>
+                        </p>
+                        <div class="collapse" id="pendingNotes">
+                            <div class="card card-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item">Note 1: Review of patient Shermin's session.</li>
+                                    <li class="list-group-item">Note 2: Suggested exercises for Piyush Mehta.</li>
+                                    <li class="list-group-item">Note 3: Progress Check on Priya's speech goals.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Completed Prescriptions -->
+                        <p>
+                            <button class="btn btn-outline-success" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#completedNotes" aria-expanded="false" aria-controls="completedNotes">
+                                Prescriptions
+                            </button>
+                        </p>
+                        <div class="collapse" id="completedNotes">
+                            <div class="card card-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item">Note 1: Priya Shermin (08-Sept-2024)</li>
+                                    <li class="list-group-item">Note 2: Piyush Aggarwal (06-Sept-2024)</li>
+                                    <li class="list-group-item">Note 3: Amily Mehta (05-Sept-2024)</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Completed Progress Reports -->
+                        <p>
+                            <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#progress" aria-expanded="false" aria-controls="pendingNotes">
+                                Progress Reports
+                            </button>
+                        </p>
+                        <div class="collapse" id="progress">
+                            <div class="card card-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item">Note 1: Review of patient Shermin's session.</li>
+                                    <li class="list-group-item">Note 2: Suggested exercises for Piyush Mehta.</li>
+                                    <li class="list-group-item">Note 3: Progress Check on Priya's speech goals.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <!-- Insights -->
+                    <h3 class="table-heading">Insights</h3>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="info-box">
+                                <h5><strong>Number of Patients</strong></h5>
+                                <p>123</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="info-box">
+                                <h5><strong>Clinical Rating</strong></h5>
+                                <p>4.5/5</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="info-box">
+                                <h5><strong>Patients Rating</strong></h5>
+                                <p>4.8/5</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <!-- Reviews Section -->
+                    <h3 class="table-heading">Recent Reviews</h3>
+                    <div class="reviews-section">
+                        <div class="d-flex align-items-center">
+                        </div>
+                        <div class="review-container">
+                            <div class="review-box">
+                                <p><strong>John Doe:</strong> Excellent service, very professional!</p>
+                            </div>
+                            <div class="review-box">
+                                <p><strong>Jane Smith:</strong> The therapy sessions have been very helpful.</p>
+                            </div>
+                            <div class="review-box">
+                                <p><strong>Emily Johnson:</strong> Great experience with the speech guide.</p>
+                            </div>
+                            <!-- Additional review boxes can be added here -->
+                        </div>
+                    </div>
+                    <hr>
+                </home>
+
+                <patients>
+                    <div class="container mt-4">
+                        <div class="accordion" id="patientsAccordion">
+                            <!-- Active Patients Section -->
+                            <div class="card">
+                                <div class="card-header" id="headingOne">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-primary btn-block" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            Active Patients
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                    data-bs-parent="#patientsAccordion">
+                                    <div class="card-body">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>S.No.</th>
+                                                    <th>Name</th>
+                                                    <th>Patient ID</th>
+                                                    <th>Photo</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Aarav Sharma</td>
+                                                    <td>P001</td>
+                                                    <td><img src="/assets/patient.png" alt="Aarav Sharma" width="50" height="50"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>Vihaan Patel</td>
+                                                    <td>P002</td>
+                                                    <td><img src="/assets/patient.png" alt="Vihaan Patel" width="50" height="50"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>Aditya Singh</td>
+                                                    <td>P003</td>
+                                                    <td><img src="/assets/patient.png" alt="Aditya Singh" width="50" height="50"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>Arjun Reddy</td>
+                                                    <td>P004</td>
+                                                    <td><img src="/assets/patient.png" alt="Arjun Reddy" width="50" height="50"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>Vivaan Gupta</td>
+                                                    <td>P005</td>
+                                                    <td><img src="/assets/patient.png" alt="Vivaan Gupta" width="50" height="50"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6</td>
+                                                    <td>Rajesh Kumar</td>
+                                                    <td>P006</td>
+                                                    <td><img src="/assets/patient.png" alt="Rajesh Kumar" width="50" height="50"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>7</td>
+                                                    <td>Arnav Bhatia</td>
+                                                    <td>P007</td>
+                                                    <td><img src="/assets/patient.png" alt="Arnav Bhatia" width="50" height="50"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>Dhruv Sinha</td>
+                                                    <td>P010</td>
+                                                    <td><img src="/assets/patient.png" alt="Dhruv Sinha" width="50" height="50"></td>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="active-patients">
+                                                <!-- Active patients will be listed here -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Patients with Warnings Section -->
+                            <div class="card">
+                                <div class="card-header" id="headingTwo">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-warning btn-block" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo">
+                                            Patients with Warnings
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#patientsAccordion">
+                                    <div class="card-body">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>S.No.</th>
+                                                    <th>Name</th>
+                                                    <th>Patient ID</th>
+                                                    <th>Photo</th>
+                                                </tr>
+                                                <tr></tr>
+                                                    <td>1</td>
+                                                    <td>Rohan Mehta</td>
+                                                    <td>P008</td>
+                                                    <td><img src="/assets/patient.png" alt="Rohan Mehta" width="50" height="50"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>Reyansh Desai</td>
+                                                    <td>P009</td>
+                                                    <td><img src="/assets/patient.png" alt="Reyansh Desai" width="50" height="50"></td>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="warn-patients">
+                                                <!-- Patients with warnings will be listed here -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Closed Patients Section -->
+                            <div class="card">
+                                <div class="card-header" id="headingThree">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-secondary btn-block" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree">
+                                            Closed Patients
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                    data-bs-parent="#patientsAccordion">
+                                    <div class="card-body">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>S.No.</th>
+                                                    <th>Name</th>
+                                                    <th>Patient ID</th>
+                                                    <th>Photo</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Ritu Choudhury</td>
+                                                    <td>P011</td>
+                                                    <td><img src="/assets/patient.png" class="img-thumbnail" width="50"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>Arvind Joshi</td>
+                                                    <td>P012</td>
+                                                    <td><img src="/assets/patient.png" class="img-thumbnail" width="50"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>Rina Patel</td>
+                                                    <td>P013</td>
+                                                    <td><img src="/assets/patient.png" class="img-thumbnail" width="50"></td>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="closed-patients">
+                                                <!-- Closed patients will be listed here -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </patients>
+            </div>
+
+        </div>
+    </div>
+    <script src="./index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
