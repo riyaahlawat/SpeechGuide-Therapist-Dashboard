@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Information</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- <!main content------>
+  <div class="main-content">
+    <div class="patient-info-row">
+
+      <div class="patient-photo">
+        <img src="assets/pat1.jfif" alt="Pineapple">
+      </div>
+
+      <div class="patient-details">
+        <p><strong>Name:</strong> Aarav Sharma </p>
+        <p><strong>Age:</strong> 45</p>
+        <p><strong>Address:</strong> 0765, Noida, India</p>
+        <p><strong>Cause of Disability:</strong> Traumatic brain injury (TBI)</p>
+      </div>
+
+    </div>
+    <div class="graphdiv">
+      <div class="heading">
+        <p>Appointment history</p>
+      </div>
+      <div class="month-selection-section">
+        <label for="month-select"><strong>Select a Month:</strong></label>
+        <select id="month-select">
+          <option value="september">September</option>
+          <option value="october">October</option>
+          <option value="november">November</option>
+          <option value="december">December</option>
+        </select>
+      </div>
+      <div class="graph-image">
+        <img src="assets/graph.jpg" alt="graph">
+      </div>
+
+    </div>
+
+    <!-- Prescription Section -->
+    <div class="prescription-section">
+      <div class="heading">
+        <p>Patient Prescriptions</p>
+      </div>
+      <div class="cards">
+        <a href="assets/prescription.pdf" target="_blank" class="card">
+          <p class="date">08/08/2024</p>
+          <p class="desc">Prescription Details</p>
+        </a>
+        <a href="assets/prescription.pdf" target="_blank" class="card">
+          <p class="date">08/07/2024</p>
+          <p class="desc">Prescription Details</p>
+        </a>
+        <a href="file3.pdf" target="_blank" class="card">
+          <p class="date">03/05/2024</p>
+          <p class="desc">Prescription Details</p>
+        </a>
+      </div>
+    </div>
+
+    <!-- Reports Section -->
+    <div class="report-section">
+      <div class="heading">
+        <p>Progress Reports</p>
+      </div>
+      <div class="cards">
+        <a href="assets/prescription.pdf" target="_blank" class="card">
+          <p class="date">July - Aug 2024</p>
+          <p class="desc">Progress Report</p>
+        </a>
+        <a href="report2.pdf" target="_blank" class="card">
+          <p class="date">Jun - July 2024</p>
+          <p class="desc">Progress Report</p>
+        </a>
+      </div>
+    </div>
+    <button class="chat-button" onclick="toggleChat()">Chat<br> Now!</button>
+    <div id="chat-window" class="chat-window">
+      <div class="chat-header">
+        <span>Chat with Us!</span>
+        <button onclick="toggleChat()" class="close-chat">&times;</button>
+      </div>
+      <div class="chat-body">
+        <p>Hello! Would you like to make an appointment?</p>
+      </div>
+      <div class="chat-footer">
+        <input type="text" placeholder="Type your message..." disabled />
+        <button disabled>Send</button>
+      </div>
+    </div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
