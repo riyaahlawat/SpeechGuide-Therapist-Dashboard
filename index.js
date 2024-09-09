@@ -3,6 +3,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const homeSection = document.querySelector('home');
     const patientsSection = document.querySelector('patients');
     const supervisorSection = document.querySelector('supervisor');
+    const exercisesSection = document.querySelector('exercises');
+    const docsSection = document.querySelector('documentations');
+    const chatsSection = document.querySelector('chats');
     const openWorkTable = document.querySelector('#open-work-table tbody');
     const closedWorkTable = document.querySelector('#closed-work-table tbody');
 
@@ -16,11 +19,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Hide all sections
             homeSection.style.opacity = '0';
+            exercisesSection.style.opacity = '0';
             patientsSection.style.opacity = '0';
             supervisorSection.style.opacity = '0';
+            docsSection.style.opacity = '0';
+            chatsSection.style.opacity = '0';
             homeSection.style.display = 'none';
             patientsSection.style.display = 'none';
             supervisorSection.style.display = 'none';
+            exercisesSection.style.display = 'none';
+            docsSection.style.display = 'none';
+            chatsSection.style.display = 'none';
 
             // Add 'active' class to clicked link
             this.classList.add('active');
@@ -33,6 +42,15 @@ document.addEventListener('DOMContentLoaded', function () {
             } else if (linkText === 'Supervisor') {
                 supervisorSection.style.opacity = '1';
                 supervisorSection.style.display = 'block';
+            } else if (linkText === 'Speech Exercises') {
+                exercisesSection.style.opacity = '1';
+                exercisesSection.style.display = 'block';
+            } else if (linkText === 'Documentations') {
+                docsSection.style.opacity = '1';
+                docsSection.style.display = 'block';
+            }else if (linkText === 'Chats') {
+                chatsSection.style.opacity = '1';
+                chatsSection.style.display = 'block';
             } else {
                 homeSection.style.opacity = '1';
                 homeSection.style.display = 'block';
@@ -76,3 +94,41 @@ document.addEventListener('DOMContentLoaded', function () {
     attachCheckboxListeners('#open-work-table');
     attachCheckboxListeners('#closed-work-table');
 });
+
+const scrollContainer = document.querySelector('.review-container');
+const scrollLeftButton = document.getElementById('scrollLeft');
+const scrollRightButton = document.getElementById('scrollRight');
+
+scrollLeftButton.addEventListener('click', () => {
+    scrollContainer.scrollBy({
+        left: -200, // adjust the value as needed
+        behavior: 'smooth'
+    });
+});
+
+scrollRightButton.addEventListener('click', () => {
+    scrollContainer.scrollBy({
+        left: 200, // adjust the value as needed
+        behavior: 'smooth'
+    });
+});
+
+
+const fileInput = document.getElementById('prescriptionUpload');
+const fileNameDisplay = document.getElementById('fileName');
+
+fileInput.addEventListener('change', function () {
+    if (fileInput.files.length > 0) {
+        fileNameDisplay.textContent = `Selected file: ${fileInput.files[0].name}`;
+    }
+});
+
+function toggleChat() {
+    var chatWindow = document.getElementById("chat-window");
+    if (chatWindow.style.display === "none" || chatWindow.style.display === "") {
+        chatWindow.style.display = "flex";
+    } else {
+        chatWindow.style.display = "none";
+    }
+}
+

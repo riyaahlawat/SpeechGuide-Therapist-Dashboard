@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Patient Information</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style_patient.css">
 </head>
 
 <body>
@@ -18,24 +18,25 @@
       </div>
 
       <div class="patient-details">
-        <p><strong>Name:</strong> Aarav Sharma </p>
+        <p><strong>Name:</strong> Aaravi Sharma </p>
         <p><strong>Age:</strong> 45</p>
         <p><strong>Address:</strong> 0765, Noida, India</p>
         <p><strong>Cause of Disability:</strong> Traumatic brain injury (TBI)</p>
+        <p><strong>Treatment started:</strong> 1-06-2024</p>
       </div>
 
     </div>
     <div class="graphdiv">
       <div class="heading">
-        <p>Appointment history</p>
+        <p>Patient History</p>
       </div>
       <div class="month-selection-section">
-        <label for="month-select"><strong>Select a Month:</strong></label>
+        <label for="month-select"><strong>Select a month to see the progress (exercise scores):</strong></label>
         <select id="month-select">
-          <option value="september">September</option>
-          <option value="october">October</option>
-          <option value="november">November</option>
-          <option value="december">December</option>
+          <option value="september">June</option>
+          <option value="october">July</option>
+          <option value="november">August</option>
+          <option value="december">September</option>
         </select>
       </div>
       <div class="graph-image">
@@ -47,7 +48,7 @@
     <!-- Prescription Section -->
     <div class="prescription-section">
       <div class="heading">
-        <p>Patient Prescriptions</p>
+        <p>Access or Upload Patient's Prescription</p>
       </div>
       <div class="cards">
         <a href="assets/prescription.pdf" target="_blank" class="card">
@@ -63,12 +64,20 @@
           <p class="desc">Prescription Details</p>
         </a>
       </div>
+      <div class="container mt-4"></div>
+      <label for="prescriptionUpload" class="form-label"><strong>Upload Patient's Prescription:</strong></label>
+      <div class="input-group">
+        <input type="file" class="form-control" id="prescriptionUpload" accept=".pdf,.jpg,.jpeg,.png">
+        <button class="btn btn-primary" type="button">Upload</button>
+      </div>
+
+      <p class="mt-2" id="fileName"></p>
     </div>
 
     <!-- Reports Section -->
     <div class="report-section">
       <div class="heading">
-        <p>Progress Reports</p>
+        <p>Access or Upload Progress Reports</p>
       </div>
       <div class="cards">
         <a href="assets/prescription.pdf" target="_blank" class="card">
@@ -80,21 +89,31 @@
           <p class="desc">Progress Report</p>
         </a>
       </div>
+      <div class="container mt-4"></div>
+      <label for="prescriptionUpload" class="form-label"><strong>Upload Patient's Progress Report:</strong></label>
+      <div class="input-group">
+        <input type="file" class="form-control" id="prescriptionUpload" accept=".pdf,.jpg,.jpeg,.png">
+        <button class="btn btn-primary" type="button">Upload</button>
+      </div>
+
+      <p class="mt-2" id="fileName"></p>
     </div>
-    <button class="chat-button" onclick="toggleChat()">Chat<br> Now!</button>
-    <div id="chat-window" class="chat-window">
-      <div class="chat-header">
-        <span>Chat with Us!</span>
-        <button onclick="toggleChat()" class="close-chat">&times;</button>
-      </div>
-      <div class="chat-body">
-        <p>Hello! Would you like to make an appointment?</p>
-      </div>
-      <div class="chat-footer">
-        <input type="text" placeholder="Type your message..." disabled />
-        <button disabled>Send</button>
-      </div>
+  </div>
+
+  <button class="chat-button" onclick="toggleChat()">Chat<br> Now!</button>
+  <div id="chat-window" class="chat-window">
+    <div class="chat-header">
+      <span>Chat with Aaravi Sharma.</span>
+      <button onclick="toggleChat()" class="close-chat">&times;</button>
     </div>
+    <div class="chat-body">
+      <p>"Hey. Type your message below to reach to the associated patient."</p>
+    </div>
+    <div class="chat-footer">
+      <input type="text" placeholder="Type your message..." disabled />
+      <button disabled>Send</button>
+    </div>
+  </div>
 
   </div>
   <script src="script.js"></script>

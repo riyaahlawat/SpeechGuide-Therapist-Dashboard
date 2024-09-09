@@ -3,10 +3,9 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f4f4f9;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
 }
 
 .main-content {
@@ -14,8 +13,12 @@ body {
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  width: 80%;
-  max-width: 1000px;
+  /* width: 80%; */
+  /* max-width: 1000px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .patient-info-row {
@@ -92,6 +95,7 @@ body {
   border-radius: 8px;
   margin-bottom: 20px;
   text-align: center;
+  width: 80%;
 }
 
 .cards {
@@ -112,6 +116,7 @@ body {
   flex: 1 1 30%;
   max-width: 300px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 20px 20px;
 }
 
 .card:hover {
